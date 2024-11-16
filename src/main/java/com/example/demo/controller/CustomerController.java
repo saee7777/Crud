@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
+import org.hibernate.internal.util.securitymanager.SystemSecurityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,6 +45,7 @@ public class CustomerController<MasterCrudApllication> {
 	@DeleteMapping("/deletecust/{id}")
 	public String deleteCustomerEntityById(@PathVariable("id")long id) {
 		
+		System.out.println("changes>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		cutomerrepo.deleteById(id);
 		return "Customer deleted successfully";
 		}
