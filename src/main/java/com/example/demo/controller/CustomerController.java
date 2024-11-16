@@ -39,6 +39,7 @@ public class CustomerController<MasterCrudApllication> {
 	
 	@GetMapping("/getcust/{id}")
 	public List<CustomerEntity > getStudents() {
+		System.out.println("changes>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		return customerService.listAll();
 	}
 	
@@ -50,10 +51,8 @@ public class CustomerController<MasterCrudApllication> {
 		return "Customer deleted successfully";
 		}
 		//return CustomerEntity.notFound().build();
+	
 	}
-	
-	
-	
 	
 	
 //	@PostMapping("/save")
